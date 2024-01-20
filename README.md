@@ -16,7 +16,3 @@ To interact with the container, hover over the boxes with your mouse. The boxes 
 ## Contributing
 
 If you find a bug or have a feature request, please submit an issue on GitHub. If you want to contribute code, please fork the repository and create a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
