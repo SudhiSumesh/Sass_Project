@@ -1,0 +1,57 @@
+* {
+  margin: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #db1bde;
+  -webkit-box-shadow: 1px 6px 10px #11b521;
+          box-shadow: 1px 6px 10px #11b521;
+  border: solid 1px black;
+  border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    background: yellow;
+  }
+}
+
+.container :nth-child(n), .container :nth-child(3) {
+  color: #8800ff;
+  -webkit-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+  font-size: 35px;
+}
+
+.container :nth-child(n):hover, .container :hover:nth-child(3) {
+  color: #989888;
+}
+
+.container :nth-child(3) {
+  background-color: aliceblue;
+}
+
+.light {
+  background: white;
+}
+/*# sourceMappingURL=first.css.map */

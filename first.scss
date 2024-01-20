@@ -1,0 +1,59 @@
+@import './reset';
+@import './variables';
+
+body{
+  font-family: $font;
+}
+// functions
+@function bcolor($color-name){
+  @return ($color-name);}
+  // mixin
+  @mixin flex-center($dir) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $dir; 
+  }
+@mixin theme($light-theme:true){
+  @if($light-theme){
+    background: lighten($bg-color,0);
+    color: darken($for-color,0);
+  }
+  @else{
+    background: lighten($bg-color, 100%);
+    // color: rgb(25, 138, 138);
+  }
+}
+@mixin media-mob{
+  @media (max-width:600px){
+  @content;
+  }
+}
+
+.container{
+  @include media-mob{
+    background: yellow;
+
+  }
+  @include flex-center(column);
+    background-color:$bg-color;
+    box-shadow: $box;
+    border: solid 1px black;
+    border-radius: 15px; 
+  :nth-child(n){
+    // color:$for-color;
+    color: bcolor(rgb(136, 0, 255));
+        transition:ease-in-out .3s;
+    font-size: map-get($font-weight , large );
+     &:hover{  
+      color: $hover-color; 
+}
+  } 
+  :nth-child(3){
+    @extend :nth-child(n);
+    background-color: aliceblue
+  }
+}
+.light{
+  @include theme(false);
+}
